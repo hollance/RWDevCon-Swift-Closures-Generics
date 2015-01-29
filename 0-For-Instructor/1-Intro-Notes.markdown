@@ -6,13 +6,15 @@ This talk is about Swift closures, generics, and enums. In other words: the good
 
 These three features -- closures, generics, and enums -- are what makes most of Swift possible. They are really what sets Swift apart from Objective-C, and what makes it a truly modern language.
 
-> Slide for this?
+> Slide
 
 For example, without enums we wouldn't have optionals. Under the hood, optionals are simply enums and I'll show you how this works in the demo.
 
 Without generics we wouldn't have typed arrays and dictionaries.
 
 Type-safety is a very important feature of Swift, and generics make it possible to have strongly typed arrays. This is unlike NSArray from Objective-C, which doesn't know anything about the type of the objects it holds and is therefore not type-safe at all.
+
+Generics are a solution to that problem.
 
 Without closures you wouldn't be able to do any of the functional style of programming that's becoming more and more popular these days.
 
@@ -32,9 +34,11 @@ In the lab you'll refactor some parts of the Tic-Tac-Toe game using closures and
 
 For those of you who didn’t attend the previous talk, what we learned there was to build a basic Tic-Tac-Toe game using Swift. In this talk you'll add some new stuff to that game. 
 
-In particular, you'll make your own generic container type. This works like array and dictionary and so on, but is better suited to board games like Tic-Tac-Toe. And because it's generic, you can reuse it in other games. You'll also make the win-detection code a lot shorter, and again reusable in other board games.
+In particular, you'll make your own generic container type. This works like Swift's built-in array and dictionary, but is better suited to board games like Tic-Tac-Toe. And because it's generic, you can reuse it in other games. 
 
-And finally, in the challenges you'll replace the game's delegate protocol with a closure, and you'll extend the Player enum so that it gives the player an avatar image. This builds on some of the things we'll do in the playground, so pay good attention. ;-)
+You'll also make the win-detection code a lot shorter, and again reusable in other board games.
+
+And finally, in the challenges you'll use a closure to replace a delegate protocol, and you'll give the player an avatar image by extending the enum. This builds on some of the things we'll do in the playground, so pay good attention. ;-)
 
 > Slide: part 2
 

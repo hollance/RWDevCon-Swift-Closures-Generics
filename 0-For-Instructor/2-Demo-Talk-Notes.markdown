@@ -2,9 +2,9 @@
 
 ## Closures (10 mins)
 
-We're going to do the first part of this demo in a playground. Open the **Closures.playground** from the **1-Starter** folder.
+We're going to do this demo in a playground. Open the **Demo.playground** from the **1-Starter** folder.
 
-> Closures.playground
+> Demo.playground
 
 This is an example of a function. It looks up how often a certain value appears in an array. Exactly what it does isn't really important here, but as you can see it's pretty simple.
 
@@ -20,9 +20,9 @@ There's another way in Swift that you can bundle up code like this and that's wi
 
 Let's copy-paste this and then assign it to a variable. 
 
-> let c = [paste]
+> let c: [paste]
 
-We do need to make a few syntax changes. The list of parameters actually becomes the type of the variable. And the stuff between the curly braces becomes the value of the variable, so it needs an equals sign.
+We do need to make a small change. The stuff between the curly braces becomes the value of the variable, so it needs an equals sign.
 
 This is really like any other variable declaration: here's the name, colon, the type, equals, and the value. Except that the type is really the type of a function [it's the same thing as this up here], and the value of the variable is a block of code.
 
@@ -36,7 +36,7 @@ We can actually get rid of these two labels here [in the type]. For the type sig
 
 To call this closure, you'd use the exact same syntax as calling a function. And there you have a closure in action. 
 
-So why would you use a closure? Well, a closure is like an object, and you can treat this as any other kind of object. You can store it in a variable, as we did here, you can pass it to another method, you can put the closure into an array, and so on.
+So why would you use a closure? Well, a closure is like an object, and you can treat this as any other kind of object. You can store it in a variable, as we did here, you can pass it to another method, you can put the closure into an array, and so on. Anything you can do with an object, you can do with a closure.
 
 So let's see an example of passing closures around.
 
@@ -232,14 +232,12 @@ They both use the X case, but each has different data associated with it.
 
 To read this data, you can't use `rawValue` anymore. Instead, you can slightly modify the switch:
 
-	case .X(let username):
-	  println(username)
+	case .X(let value):
+	  println(value)
 
 And if we change it to `switch t`, it will print "Tim".
 
-This label (username) doesn't actually have to be the same as what it is called in the enum, so you could change it to:
-
-	case .X(let value):
+The label `value` doesn't actually have to be the same as what it is called in the enum. (This is an example of switch's pattern matching features.)
 
 You can also associate more than one piece of data, for example for the Tic-Tac-Toe olympics we want to know where the player comes from, so we add the country:
 

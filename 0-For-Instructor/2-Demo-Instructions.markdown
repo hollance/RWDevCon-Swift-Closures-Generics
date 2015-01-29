@@ -191,17 +191,14 @@ Add another variable:
 
 Modify the `switch` statement to print out the username:
 
-	case .X(let username):  
-	  println(username)
+	case .X(let value):  
+	  println(value)
 
 Change the `switch` to:
 
 	switch t {
 
-Change the label inside the `switch` from `username` to `value`:
-
-	case .X(let value):  
-	  println(value)
+This prints out the username from the other `Player` object.
 
 Associate another value with the X case:
 

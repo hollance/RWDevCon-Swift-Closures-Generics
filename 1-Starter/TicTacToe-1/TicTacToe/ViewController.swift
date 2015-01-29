@@ -105,10 +105,13 @@ class ViewController: UIViewController {
       }
 
       let alert = UIAlertController(title: "Winner!", message: "\(playerString) has won", preferredStyle: .Alert)
-      alert.addAction(UIAlertAction(title: "New Game", style: .Default) {
+
+      let action = UIAlertAction(title: "New Game", style: .Default) {
         (alert: UIAlertAction!) -> Void in
         self.reset()
-      })
+      }
+
+      alert.addAction(action)
       self.presentViewController(alert, animated: true, completion: nil)
       
     } else if grid.countOccupiedSpaces() == 9 {
@@ -122,7 +125,6 @@ class ViewController: UIViewController {
       self.presentViewController(alert, animated: true, completion: nil)
     }
   }
-
 }
 
 extension ViewController: BoardDelegate {
